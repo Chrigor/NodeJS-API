@@ -23,7 +23,7 @@ module.exports = {
 
   async store(request, response) {
 
-    const { id, name, price, description, imagem64 } = request.body;
+    const { id, name, price, description, imagem } = request.body;
 
     let product = await Product.findOne({ id })
 
@@ -34,7 +34,7 @@ module.exports = {
         name,
         price,
         description,
-        imagem64
+        imagem
       })
     }
 
@@ -50,8 +50,8 @@ module.exports = {
     console.log(product);
 
     if (product) {
-      const { name, price, description, imagem64 } = request.body;
-      product = await Product.updateOne({ id }, { $set: { id, name, price, description, imagem64 } });
+      const { name, price, description, imagem } = request.body;
+      product = await Product.updateOne({ id }, { $set: { id, name, price, description, imagem } });
 
       response.json({ product });
     } else {
