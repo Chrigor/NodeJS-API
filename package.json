@@ -7,5 +7,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.8.9"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo\"Error:not specificed\"&& exit 1"
   }
 }

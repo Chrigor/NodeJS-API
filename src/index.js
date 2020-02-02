@@ -14,5 +14,5 @@ app.use(cors()); // permite acesso de outros endereços
 app.use(express.json());
 app.use(routes);
 
-const port = 3333;
+var port = process.env.PORT || 8080;
 app.listen(port);
